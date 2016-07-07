@@ -84,7 +84,7 @@
             }
         },
         beforeDestroy () {
-            document.body.className = document.body.className.replace(' modal-open', '');
+            document.body.className = document.body.className.replace(/\s?modal-open/, '');
         },
         watch: {
             show (value) {
@@ -99,7 +99,7 @@
                     }
 
                     window.setTimeout(() => {
-                        document.body.className = document.body.className.replace(' modal-open', '');
+                        document.body.className = document.body.className.replace(/\s?modal-open/, '');
                     }, this.duration || 0);
                 }
             }
