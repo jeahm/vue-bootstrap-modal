@@ -8,6 +8,21 @@
     "type": "git",
     "url": "git+https://github.com/Coffcer/vue-bootstrap-modal"
   },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ],
+      [
+        "vueify"
+      ]
+    ]
+  },
   "keywords": [
     "vue",
     "modal",
