@@ -107,13 +107,11 @@
         methods: {
             ok () {
                 this.$emit('ok');
-                if (this.closeWhenOK) {
-                    this.show = false;
-                }
+                this.$emit('update:show', false)
             },
             cancel () {
                 this.$emit('cancel');
-                this.show = false;
+                this.$emit('update:show', false)                
             },
             // 点击遮罩层
             clickMask () {
